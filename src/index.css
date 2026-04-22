@@ -1,0 +1,30 @@
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GARANTE ALTURA TOTAL */
+html, body, #root {
+  height: 100%;
+}
+
+/* ESTILO BASE */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #1f2937; /* cinza escuro (mais elegante que preto puro) */
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BOTÕES */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}

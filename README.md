@@ -6,22 +6,32 @@ O objetivo é apresentar soluções tecnológicas para controle, segurança e ot
 
 
 Como funciona
+
+
 O sistema segue um fluxo simples:
 
 
 Diagnóstico
+
+
 Análise da necessidade do cliente
 
 
 Instalação
+
+
 Implementação dos rastreadores nos veículos
 
 
 Configuração
+
+
 Personalização da plataforma
 
 
 Monitoramento
+
+
 Acompanhamento 24/7 com suporte
 
 
@@ -46,6 +56,7 @@ Acompanhamento 24/7 com suporte
 
 
 Objetivo do projeto
+
 Este sistema foi desenvolvido para:
 
 

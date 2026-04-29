@@ -54,10 +54,14 @@
   text-align: center;
 }
 
+
 .container h2 {
-  color: #00235B;
-  margin-top: 30px;
-  margin-right: -100%;
+  text-align: center;
+  color: #002AAD;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
 }
 
 .container p {
@@ -77,4 +81,188 @@
 .sobre-content h2 {
   width: 100%;
   text-align: center;
+}
+
+.features-sobre {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.section-tag-sobre {
+  display: inline-block;
+  color: #00235B;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.features-grid-sobre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card-sobre {
+  background: white;
+  padding: 36px 30px;
+  border-radius: 18px;
+  border: 1px solid var(--borda);
+  transition:  transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.feature-card-sobre:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 0 2px #0077CC;
+}
+
+.feature-icon-lock {
+  width: 55px;
+  height: 55px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 26px;
+  margin-bottom: 22px;
+  color: gold;
+}
+
+.feature-icon-lightbulb {
+  width: 55px;
+  height: 55px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 26px;
+  margin-bottom: 22px;
+  color: yellow;
+}
+
+.feature-card-sobre h3 {
+  color: #006B2D;
+  font-size: 19px;
+  margin-bottom: 10px;
+  
+}
+
+.feature-card-sobre p {
+  color: var(--texto-suave);
+  font-size: 15px;
+}
+
+/* ============ MISSÃO, VISÃO E VALORES ============ */
+.mvv {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px 40px;
+  text-align: center;
+}
+
+.mvv-title {
+  color: #002AAD;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.mvv-card {
+  background: white;
+  border-radius: 18px;
+  padding: 40px 36px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.mvv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 42, 173, 0.1);
+}
+
+.mvv-card h3 {
+  text-align: center;
+  color: #006B2D;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.mvv-tagline {
+  color: #5a6373;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.mvv-desc {
+  color: #5a6373;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.valores-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.valores-list li {
+  color: #5a6373;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.valores-list li span {
+  flex-shrink: 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .mvv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mvv {
+    padding: 60px 20px 20px;
+  }
+
+  .mvv-title {
+    font-size: 28px;
+  }
 }

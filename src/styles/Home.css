@@ -160,17 +160,36 @@ body {
   box-shadow: 0 0 0 2px #0077CC;
 }
 
+/* estilo base para todos os ícones */
 .feature-icon {
-  width: 55px;
-  height: 55px;
-  background: linear-gradient(135deg, var(--verde), var(--azul));
-  border-radius: 14px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
   font-size: 26px;
   margin-bottom: 22px;
+  width: 400x;
+  height: 55px;
+}
+
+.icon-lock {
+  color: gold;
+}
+
+.icon-satellite {
+  color: #00A63E; 
+}
+
+.icon-chart {
+  color: #002AAD;
+}
+
+.icon-map {
+  color: #00A63E; 
+}
+
+.icon-alert {
+  color: red;
 }
 
 .feature-card h3 {

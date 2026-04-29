@@ -11,7 +11,7 @@ function Router() {
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
-
+    
       {/* Footer aparece em TODAS as páginas */}
       <Footer />
 

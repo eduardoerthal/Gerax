@@ -2,6 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import "../styles/Home.css";
+import WhatsAppWidget from "../components/WhatsappWidget";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+  faChartLine, 
+  faLock, 
+  faMapLocationDot, 
+  faTowerBroadcast, 
+  faTriangleExclamation 
+} from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
@@ -36,27 +45,41 @@ function Home() {
 
         <div className="features-grid">
           <div className="feature-card">
-            <div className="feature-icon">📡</div>
+            <div className="feature-icon icon-satellite">
+              <FontAwesomeIcon icon={faTowerBroadcast} />
+            </div>
             <h3>Rastreamento em tempo real</h3>
             <p>Localização precisa via GPS com atualização contínua e histórico de rotas detalhado.</p>
           </div>
+
           <div className="feature-card">
-            <div className="feature-icon">🚨</div>
+            <div className="feature-icon icon-alert">
+              <FontAwesomeIcon icon={faTriangleExclamation} />
+            </div>
             <h3>Alertas inteligentes</h3>
             <p>Receba notificações de excesso de velocidade, paradas indevidas e desvios de rota.</p>
           </div>
+
           <div className="feature-card">
-            <div className="feature-icon">🔒</div>
+            <div className="feature-icon icon-lock">
+              <FontAwesomeIcon icon={faLock} />
+            </div>
             <h3>Bloqueio remoto</h3>
             <p>Em caso de roubo, bloqueie o veículo de forma remota e segura pelo painel.</p>
           </div>
+
           <div className="feature-card">
-            <div className="feature-icon">📊</div>
+            <div className="feature-icon icon-chart">
+              <FontAwesomeIcon icon={faChartLine} />
+            </div>
             <h3>Relatórios completos</h3>
             <p>Análises de desempenho, consumo e produtividade da frota em dashboards visuais.</p>
           </div>
+
           <div className="feature-card">
-            <div className="feature-icon">🗺️</div>
+            <div className="feature-icon icon-map">
+              <FontAwesomeIcon icon={faMapLocationDot} />
+            </div>
             <h3>Cerca virtual</h3>
             <p>Defina áreas autorizadas e seja alertado sempre que um veículo entrar ou sair.</p>
           </div>
@@ -99,6 +122,8 @@ function Home() {
           <Link to="/contato" className="btn-primary">Solicitar demonstração</Link>
         </div>
       </section>
+      
+      <WhatsAppWidget />
     </div>
   );
 }

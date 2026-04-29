@@ -23,7 +23,7 @@ function Footer() {
             </a>
 
             <a 
-              href="https://linkedin.com/company/suaempresa" 
+              href="https://www.linkedin.com/gerax-decisões-inteligentes" 
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -36,6 +36,7 @@ function Footer() {
           <h5>Empresa</h5>
           <Link to="/sobre">Sobre</Link>
           <Link to="/solucoes">Soluções</Link>
+          <Link to="/contato">Contato</Link>
         </div>
 
         <div>

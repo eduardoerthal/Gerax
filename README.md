@@ -1,16 +1,88 @@
-# React + Vite
+Sistema de Rastreamento e Gestão de Frotas
+Este projeto é uma aplicação web desenvolvida em React para uma empresa de rastreamento, monitoramento e gestão de frotas.
+O objetivo é apresentar soluções tecnológicas para controle, segurança e otimização de veículos em tempo real.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+Como funciona
+O sistema segue um fluxo simples:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+Diagnóstico
+Análise da necessidade do cliente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Instalação
+Implementação dos rastreadores nos veículos
+
+
+Configuração
+Personalização da plataforma
+
+
+Monitoramento
+Acompanhamento 24/7 com suporte
+
+
+
+🛠️ Tecnologias utilizadas
+
+
+⚛️ React
+
+
+🔀 React Router DOM
+
+
+🎨 CSS (estilização personalizada)
+
+
+⭐ Font Awesome (ícones)
+
+
+📱 Integração com WhatsApp (widget)
+
+
+
+Objetivo do projeto
+Este sistema foi desenvolvido para:
+
+
+Melhorar a gestão de frotas
+
+
+Aumentar a segurança dos veículos
+
+
+Otimizar custos operacionais
+
+
+Oferecer uma solução tecnológica e intuitiva
+
+
+
+Contato
+A aplicação possui integração com:
+
+
+Página de contato
+
+
+Botão de ação (CTA)
+
+
+Widget do WhatsApp para comunicação rápida
+
+
+
+Como rodar o projeto
+# Clone o repositóriogit clone <url-do-repo># Acesse a pastacd nome-do-projeto# Instale as dependênciasnpm install# Rode o projetonpm start
+
+💡 Observações
+
+Vou fazer o backend em python
+
+
+Vou fazer o banco de dados ainda...
+

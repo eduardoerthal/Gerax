@@ -21,10 +21,10 @@ function WhatsAppWidget() {
           </div>
 
           <div className="whatsapp-body">
-            <p>Olá 👋 Como podemos te ajudar?</p>
+            <p>Olá, quer melhorar o controle da sua frota? Fale com a gente!</p>
 
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5541991877633"
               target="_blank"
               rel="noopener noreferrer"
             >

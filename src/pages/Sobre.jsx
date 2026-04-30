@@ -3,7 +3,7 @@ import "../styles/Sobre.css"
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import bgSobre from "../assets/sobre.png";
-import WhatsAppWidget from "../components/WhatsappWidget";
+import WhatsAppWidget from "../components/WhatsAppWidget";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLightbulb, faLock } from '@fortawesome/free-solid-svg-icons'
 import { FaLightbulb } from "react-icons/fa";

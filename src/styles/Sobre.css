@@ -1,9 +1,7 @@
-/* Container geral */
 .sobre {
   font-family: Arial, sans-serif;
 }
 
-/* HERO */
 .hero {
   padding: 80px 20px;
   text-align: center;
@@ -18,7 +16,6 @@
   position: relative;
 }
 
-/* conteúdo por cima */
 .overlay {
   position: relative;
   color: white;
@@ -38,7 +35,6 @@
   line-height: 1.6;
 }
 
-/* CONTEÚDO */
 .sobre-content {
   padding: 60px 20px;
   background: #f5f5f5;
@@ -62,6 +58,18 @@
   font-weight: 800;
   letter-spacing: -0.5px;
   margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.container h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: #00A63E; /* verde da sua marca */
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
 .container p {
@@ -83,6 +91,8 @@
   text-align: center;
 }
 
+
+/* ============ FEATURES ============ */
 .features-sobre {
   padding: 100px 80px;
   text-align: center;
@@ -126,35 +136,27 @@
 }
 
 .feature-icon-lock {
-  width: 55px;
-  height: 55px;
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 26px;
-  margin-bottom: 22px;
-  color: gold;
+  margin-bottom: 18px;
+  background: rgba(192, 192, 192, 0.15);
+  color: #C0C0C0;
 }
 
 .feature-icon-lightbulb {
-  width: 55px;
-  height: 55px;
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 26px;
-  margin-bottom: 22px;
-  color: yellow;
+  margin-bottom: 18px;
+  background: rgba(255, 193, 7, 0.15);
+  color: #FFC107;
 }
 
 .feature-card-sobre h3 {
@@ -183,6 +185,18 @@
   font-weight: 800;
   letter-spacing: -0.5px;
   margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.mvv-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: #00A63E;
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
 .mvv-grid {
@@ -223,12 +237,14 @@
   font-size: 16px;
   margin-bottom: 14px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .mvv-desc {
   color: #5a6373;
   font-size: 15px;
   line-height: 1.7;
+  text-align: center;
 }
 
 .valores-list {

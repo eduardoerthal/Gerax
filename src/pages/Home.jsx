@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import "../styles/Home.css";
-import WhatsAppWidget from "../components/WhatsappWidget";
+import WhatsAppWidget from "../components/WhatsAppWidget";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faChartLine, 
@@ -20,11 +20,11 @@ function Home() {
       <section className="hero">
         <div className="hero-content">
           <span className="subtitle">Rastreamento e gestão de frotas</span>
-          <h1>
-            Soluções inteligentes.<br />
-            Decisões que transformam.<br />
-            <span className="destaque">Resultados otimizados.</span>
-          </h1>
+         <h1 className="hero-title">
+        <span className="line line1">Soluções inteligentes.</span><br />
+        <span className="line line2">Decisões que transformam.</span><br />
+        <span className="line line3">Resultados otimizados.</span>
+      </h1>
           <p>
             Visualize em tempo real a localização dos seus veículos e acompanhe toda a movimentação
             com alertas, monitoramento e proteção completa para sua operação.

@@ -37,7 +37,6 @@ function Home() {
       </section>
 
       <section className="features">
-        <span className="section-tag">Nossas soluções</span>
         <h2 className="section-title">Tudo o que sua frota precisa</h2>
         <p className="section-subtitle">
           Tecnologia de ponta combinada com simplicidade. Controle total da sua operação em uma única plataforma.

@@ -1,0 +1,352 @@
+.contato {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* ============ BANNER AZUL ============ */
+.contato-banner {
+  background: linear-gradient(135deg, #002AAD 0%, #001A6B 100%);
+  padding: 90px 40px 80px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contato-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(47, 168, 79, 0.18), transparent 70%);
+  filter: blur(40px);
+}
+
+.contato-banner::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.18), transparent 70%);
+  filter: blur(40px);
+}
+
+.contato-banner__content {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.contato-banner h1 {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.contato-banner p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn-whatsapp svg {
+  font-size: 20px;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5b;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45);
+}
+
+/* ============ CONTEÚDO PRINCIPAL ============ */
+.contato-content {
+  padding: 80px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
+}
+
+.contato-info h2,
+.contato-form-wrap h2 {
+  color: #002AAD;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.contato-lead {
+  color: #5a6373;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* ============ CARDS DE INFO ============ */
+.info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 22px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 42, 173, 0.08);
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 42, 173, 0.1);
+  color: #002AAD;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.info-icon--flip svg {
+  transform: scaleX(-1);
+}
+
+.info-body {
+  flex: 1;
+}
+
+.info-body h3 {
+  color: #002AAD;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.info-body p {
+  color: #5a6373;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+.info-block {
+  margin-bottom: 18px;
+}
+
+.info-block:last-child {
+  margin-bottom: 0;
+}
+
+.info-block strong {
+  display: block;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.info-block span {
+  display: block;
+  color: #5a6373;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.btn-call {
+  display: inline-block;
+  background: #002AAD;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-call:hover {
+  background: #001A6B;
+  transform: translateY(-2px);
+}
+
+/* ============ REDES SOCIAIS ============ */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+.social-icon--instagram {
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  box-shadow: 0 6px 16px rgba(220, 39, 67, 0.3);
+}
+
+.social-icon--linkedin {
+  background: #0A66C2;
+  box-shadow: 0 6px 16px rgba(10, 102, 194, 0.3);
+}
+
+/* ============ FORMULÁRIO ============ */
+.contato-form-wrap {
+  background: white;
+  padding: 36px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5a6373;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-field input,
+.form-field textarea {
+  background: #f5f7fb;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #1a1a1a;
+  transition: border-color 0.2s, background 0.2s;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  background: white;
+  border-color: #002AAD;
+}
+
+.form-field small {
+  color: #9aa3b3;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.btn-submit {
+  background: #2fa84f;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+  box-shadow: 0 8px 20px rgba(47, 168, 79, 0.25);
+}
+
+.btn-submit:hover {
+  background: #24853f;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(47, 168, 79, 0.35);
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 900px) {
+  .contato-banner {
+    padding: 60px 20px;
+  }
+
+  .contato-banner h1 {
+    font-size: 32px;
+  }
+
+  .contato-content {
+    padding: 50px 20px;
+  }
+
+  .contato-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 22px;
+  }
+}

@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Sobre from "../pages/Sobre";
 import Footer from "../components/Footer";
 import Contato from "../pages/Contato";
+import Solucoes from "../pages/Solucoes";
 
 function Router() {
   return (
@@ -12,6 +13,7 @@ function Router() {
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/solucoes" element={<Solucoes />} />
       </Routes>
       <Footer />
 

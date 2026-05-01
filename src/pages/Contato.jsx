@@ -1,10 +1,102 @@
-import React from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2"; // 👈 ADICIONADO
 import { Navbar } from "../components/Navbar";
 import WhatsAppWidget from "../components/WhatsAppWidget";
 import { FaWhatsapp, FaPhone, FaClock, FaShareAlt, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import "../styles/Contato.css";
 
 function Contato() {
+  const [form, setForm] = useState({
+    nome: "",
+    sobrenome: "",
+    email: "",
+    telefone: "+55",
+    empresa: "",
+    cnpj: "",
+    assunto: "",
+    mensagem: ""
+  });
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.id]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const dados = {
+      nome: form.nome + " " + form.sobrenome,
+      email: form.email,
+      telefone: form.telefone,
+      empresa: form.empresa,
+      cnpj: form.cnpj,
+      mensagem: form.assunto + " - " + form.mensagem
+    };
+
+    // 👇 LOADING
+    Swal.fire({
+      title: "Enviando...",
+      text: "Aguarde um momento",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
+
+    try {
+      const res = await fetch("http://localhost:8000/contato", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+      });
+
+      Swal.close(); // 👈 fecha loading
+
+      if (res.ok) {
+        Swal.fire({
+          icon: "success",
+          title: "Mensagem enviada!",
+          text: "Nossa equipe entrará em contato em breve.",
+          confirmButtonColor: "#00A63E"
+        });
+
+        setForm({
+          nome: "",
+          sobrenome: "",
+          email: "",
+          telefone: "+55",
+          empresa: "",
+          cnpj: "",
+          assunto: "",
+          mensagem: ""
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Erro ao enviar",
+          text: "Tente novamente mais tarde.",
+          confirmButtonColor: "#002AAD"
+        });
+      }
+    } catch (error) {
+      Swal.close();
+
+      console.error(error);
+
+      Swal.fire({
+        icon: "error",
+        title: "Servidor indisponível",
+        text: "Verifique sua conexão ou tente novamente.",
+        confirmButtonColor: "#002AAD"
+      });
+    }
+  };
+
   return (
     <div className="contato">
       <Navbar />
@@ -106,48 +198,48 @@ function Contato() {
               com você o mais breve possível.
             </p>
 
-            <form className="contato-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="contato-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-field">
                   <label htmlFor="nome">Primeiro Nome *</label>
-                  <input id="nome" type="text" required />
+                  <input id="nome" type="text" value={form.nome} onChange={handleChange} required />
                 </div>
                 <div className="form-field">
                   <label htmlFor="sobrenome">Sobrenome *</label>
-                  <input id="sobrenome" type="text" required />
+                  <input id="sobrenome" type="text" value={form.sobrenome} onChange={handleChange} required />
                 </div>
               </div>
 
               <div className="form-field">
                 <label htmlFor="email">E-mail *</label>
-                <input id="email" type="email" required />
+                <input id="email" type="email" value={form.email} onChange={handleChange} required />
               </div>
 
               <div className="form-field">
                 <label htmlFor="telefone">Telefone *</label>
-                <input id="telefone" type="tel" defaultValue="+55" required />
+                <input id="telefone" type="tel" value={form.telefone} onChange={handleChange} required />
                 <small>Não esqueça do DDD</small>
               </div>
 
               <div className="form-row">
                 <div className="form-field">
                   <label htmlFor="empresa">Nome da Empresa *</label>
-                  <input id="empresa" type="text" required />
+                  <input id="empresa" type="text" value={form.empresa} onChange={handleChange} required />
                 </div>
                 <div className="form-field">
                   <label htmlFor="cnpj">CNPJ</label>
-                  <input id="cnpj" type="text" />
+                  <input id="cnpj" type="text" value={form.cnpj} onChange={handleChange} />
                 </div>
               </div>
 
               <div className="form-field">
                 <label htmlFor="assunto">Assunto *</label>
-                <input id="assunto" type="text" required />
+                <input id="assunto" type="text" value={form.assunto} onChange={handleChange} required />
               </div>
 
               <div className="form-field">
                 <label htmlFor="mensagem">Mensagem *</label>
-                <textarea id="mensagem" rows="5" required />
+                <textarea id="mensagem" rows="5" value={form.mensagem} onChange={handleChange} required />
               </div>
 
               <button type="submit" className="btn-submit">

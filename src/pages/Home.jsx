@@ -4,12 +4,12 @@ import { Navbar } from "../components/Navbar";
 import "../styles/Home.css";
 import WhatsAppWidget from "../components/WhatsAppWidget";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faChartLine, 
-  faLock, 
-  faMapLocationDot, 
-  faTowerBroadcast, 
-  faTriangleExclamation 
+import {
+  faChartLine,
+  faLock,
+  faMapLocationDot,
+  faTowerBroadcast,
+  faTriangleExclamation
 } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {

@@ -14,7 +14,8 @@ function Contato() {
     empresa: "",
     cnpj: "",
     assunto: "",
-    mensagem: ""
+    mensagem: "",
+    website: ""
   });
 
   const handleChange = (e) => {
@@ -33,7 +34,8 @@ function Contato() {
       telefone: form.telefone,
       empresa: form.empresa,
       cnpj: form.cnpj,
-      mensagem: form.assunto + " - " + form.mensagem
+      mensagem: form.assunto + " - " + form.mensagem,
+      website: form.website
     };
 
     // 👇 LOADING
@@ -47,7 +49,8 @@ function Contato() {
     });
 
     try {
-      const res = await fetch("http://localhost:8000/contato", {
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+      const res = await fetch(`${apiUrl}/contato`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -73,7 +76,8 @@ function Contato() {
           empresa: "",
           cnpj: "",
           assunto: "",
-          mensagem: ""
+          mensagem: "",
+          website: ""
         });
       } else {
         Swal.fire({
@@ -177,7 +181,7 @@ function Contato() {
                     <FaInstagram />
                   </a>
                   <a
-                    href="https://www.linkedin.com/gerax-decisões-inteligentes"
+                    href="https://www.linkedin.com/company/gerax-decisões-inteligentes/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn da Gerax"
@@ -240,6 +244,18 @@ function Contato() {
               <div className="form-field">
                 <label htmlFor="mensagem">Mensagem *</label>
                 <textarea id="mensagem" rows="5" value={form.mensagem} onChange={handleChange} required />
+              </div>
+
+              <div style={{ position: "absolute", left: "-9999px", top: "-9999px" }} aria-hidden="true">
+                <label htmlFor="website">Não preencha este campo</label>
+                <input
+                  id="website"
+                  type="text"
+                  tabIndex="-1"
+                  autoComplete="off"
+                  value={form.website}
+                  onChange={handleChange}
+                />
               </div>
 
               <button type="submit" className="btn-submit">

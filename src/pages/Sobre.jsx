@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "../styles/Sobre.css"
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
-import bgSobre from "../assets/sobre.png";
+import bgSobre from "../assets/Sobre.png";
 import WhatsAppWidget from "../components/WhatsAppWidget";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLightbulb, faLock } from '@fortawesome/free-solid-svg-icons'

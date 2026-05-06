@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import WhatsAppWidget from "../components/WhatsAppWidget";
@@ -39,12 +38,11 @@ function Solucoes() {
           </p>
           <span className="solucoes-subtitle">
             Nossas soluções são divididas em módulos estratégicos para atender
-            exatamente à dor da sua operação
+            exatamente à fragilidade da sua operação
           </span>
         </div>
       </section>
 
-      {/* ===================== MÓDULO 1 - SEGURANÇA ===================== */}
       <section className="modulo modulo--claro">
         <div className="modulo__header">
           <span className="modulo__numero modulo__numero--azul">01</span>
@@ -103,7 +101,6 @@ function Solucoes() {
         </div>
       </section>
 
-      {/* ===================== MÓDULO 2 - EFICIÊNCIA ===================== */}
       <section className="modulo modulo--branco">
         <div className="modulo__header">
           <span className="modulo__numero modulo__numero--verde">02</span>
@@ -149,7 +146,6 @@ function Solucoes() {
         </div>
       </section>
 
-      {/* ===================== MÓDULO 3 - OPERAÇÕES ESPECIAIS ===================== */}
       <section className="modulo modulo--claro">
         <div className="modulo__header">
           <span className="modulo__numero modulo__numero--azul">03</span>
@@ -224,7 +220,6 @@ function Solucoes() {
         </div>
       </section>
 
-      {/* ===================== CTA FINAL ===================== */}
       <section className="solucoes-cta">
         <div className="solucoes-cta__box">
           <h2>Quer saber qual módulo se encaixa na sua operação?</h2>

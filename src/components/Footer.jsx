@@ -34,20 +34,35 @@ function Footer() {
 
         <div>
           <h5>Empresa</h5>
-          <Link to="/sobre">Sobre</Link>
+          <Link to="/">Início</Link>
           <Link to="/solucoes">Soluções</Link>
+          <Link to="/sobre">Sobre</Link>
           <Link to="/contato">Contato</Link>
         </div>
 
         <div>
           <h5>Suporte</h5>
-          <a href="#">Central de ajuda</a>
+          <p className="footer-emergency-number">0800 080 9030</p>
+          <a
+            href="https://wa.me/5541988799030"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+          <p className="footer-hours-info">Comercial: Seg–Sex, 8h–18h</p>
         </div>
 
         <div>
           <h5>Contato</h5>
-          <a href="mailto:contato@gerax.com.br">Contato@geraxtech.com.br</a>
-          <a href="tel:+5500000000000">(00) 0000-0000</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=Contato@geraxtech.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contato@geraxtech.com.br
+          </a>
+          <a href="tel:+5541988799030">(41) 98879-9030</a>
         </div>
       </div>
 

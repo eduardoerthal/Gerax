@@ -1,29 +1,45 @@
-/* RESET GLOBAL */
+/* ============ TOKENS ============ */
+:root {
+  --azul: #002AAD;
+  --azul-escuro: #001A6B;
+  --azul-suave: #123c8d;
+  --verde: #2fa84f;
+  --verde-escuro: #24853f;
+  --verde-claro: #6fffa1;
+  --texto: #1a1a1a;
+  --texto-suave: #5a6373;
+  --bg: #f5f7fb;
+  --branco: #ffffff;
+  --borda: #e3e8f0;
+  --shadow-sm: 0 2px 8px rgba(0, 26, 107, 0.06);
+  --shadow-md: 0 12px 32px rgba(0, 26, 107, 0.08);
+  --shadow-lg: 0 24px 60px rgba(0, 26, 107, 0.12);
+}
+
+/* ============ RESET GLOBAL ============ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* GARANTE ALTURA TOTAL */
 html, body, #root {
   height: 100%;
 }
 
-/* ESTILO BASE */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #1f2937; /* cinza escuro (mais elegante que preto puro) */
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: var(--branco);
+  color: var(--texto);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* LINKS */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* BOTÕES */
 button {
   font-family: inherit;
   cursor: pointer;

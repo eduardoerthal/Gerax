@@ -24,7 +24,7 @@ function WhatsAppWidget() {
             <p>Olá, quer melhorar o controle da sua frota? Fale com a gente!</p>
 
             <a
-              href="https://wa.me/5541991877633"
+              href="https://wa.me/5541988799030"
               target="_blank"
               rel="noopener noreferrer"
             >

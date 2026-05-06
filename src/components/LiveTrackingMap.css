@@ -1,0 +1,113 @@
+.tracking-map {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow:
+    0 24px 64px rgba(0, 42, 173, 0.14),
+    0 4px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  width: 100%;
+  max-width: 460px;
+  animation: tm-float 5s ease-in-out infinite;
+}
+
+@keyframes tm-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.tracking-map__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #f0f4ff;
+}
+
+.tracking-map__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.tracking-map__pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--verde);
+  border-radius: 50%;
+  animation: tm-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes tm-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(47, 168, 79, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(47, 168, 79, 0); }
+}
+
+.tracking-map__count {
+  font-size: 12px;
+  font-weight: 700;
+  color: #002aad;
+  background: rgba(0, 42, 173, 0.08);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.tracking-map__canvas {
+  background: #eef2fb;
+  line-height: 0;
+}
+
+.tracking-map__canvas svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tracking-map__vehicle {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.tracking-map__satellite {
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.tracking-map__footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #f0f4ff;
+}
+
+.tracking-map__metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  border-right: 1px solid #f0f4ff;
+}
+
+.tracking-map__metric:last-child {
+  border-right: none;
+}
+
+.tracking-map__metric strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: #002aad;
+  line-height: 1;
+}
+
+.tracking-map__metric small {
+  font-size: 11px;
+  color: #5a6373;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tracking-map,
+  .tracking-map__pulse {
+    animation: none;
+  }
+}

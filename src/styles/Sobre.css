@@ -1,10 +1,5 @@
 .sobre {
-  font-family: Arial, sans-serif;
-}
-
-.hero {
-  padding: 80px 20px;
-  text-align: center;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
 .hero-sobre {
@@ -25,7 +20,7 @@
 }
 
 .overlay h1 {
-  color: #006B2D;
+  color: var(--verde);
   font-size: 50px;
   margin-bottom: 15px;
 }
@@ -36,24 +31,23 @@
 }
 
 .sobre-content {
-  padding: 60px 20px;
-  background: #f5f5f5;
+  padding: 80px 80px;
+  background: var(--bg);
   display: flex;
   flex-direction: column;
-  align-items: center; /* centraliza horizontalmente */
-  text-align: center;  /* centraliza o texto */
+  align-items: center;
+  text-align: center;
 }
 
 .container {
   max-width: 800px;
-  margin: 0 auto; /* centraliza o bloco na tela */
+  margin: 0 auto;
   text-align: center;
 }
 
-
 .container h2 {
   text-align: center;
-  color: #002AAD;
+  color: var(--azul);
   font-size: 36px;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -67,7 +61,7 @@
   display: block;
   width: 100%;
   height: 6px;
-  background: #00A63E; /* verde da sua marca */
+  background: var(--verde);
   margin-top: 8px;
   border-radius: 2px;
 }
@@ -91,7 +85,6 @@
   text-align: center;
 }
 
-
 /* ============ FEATURES ============ */
 .features-sobre {
   padding: 100px 80px;
@@ -100,11 +93,11 @@
 
 .section-tag-sobre {
   display: inline-block;
-  color: #00235B;
+  color: var(--azul);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 12px;
 }
 
@@ -121,7 +114,7 @@
   padding: 36px 30px;
   border-radius: 18px;
   border: 1px solid var(--borda);
-  transition:  transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +125,8 @@
 
 .feature-card-sobre:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 0 2px #0077CC;
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
 }
 
 .feature-icon-lock {
@@ -143,8 +137,8 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  background: rgba(192, 192, 192, 0.15);
-  color: #C0C0C0;
+  background: rgba(100, 116, 139, 0.12);
+  color: #64748b;
 }
 
 .feature-icon-lightbulb {
@@ -160,10 +154,9 @@
 }
 
 .feature-card-sobre h3 {
-  color: #006B2D;
+  color: var(--azul);
   font-size: 19px;
   margin-bottom: 10px;
-  
 }
 
 .feature-card-sobre p {
@@ -180,7 +173,7 @@
 }
 
 .mvv-title {
-  color: #002AAD;
+  color: var(--azul);
   font-size: 36px;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -194,7 +187,7 @@
   display: block;
   width: 100%;
   height: 6px;
-  background: #00A63E;
+  background: var(--verde);
   margin-top: 8px;
   border-radius: 2px;
 }
@@ -210,7 +203,6 @@
   background: white;
   border-radius: 18px;
   padding: 40px 36px;
-  text-align: left;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
@@ -224,7 +216,7 @@
 
 .mvv-card h3 {
   text-align: center;
-  color: #006B2D;
+  color: var(--azul);
   font-size: 30px;
   font-weight: 800;
   margin-bottom: 20px;
@@ -232,7 +224,7 @@
 }
 
 .mvv-tagline {
-  color: #5a6373;
+  color: var(--texto-suave);
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 14px;
@@ -241,7 +233,7 @@
 }
 
 .mvv-desc {
-  color: #5a6373;
+  color: var(--texto-suave);
   font-size: 15px;
   line-height: 1.7;
   text-align: center;
@@ -254,7 +246,7 @@
 }
 
 .valores-list li {
-  color: #5a6373;
+  color: var(--texto-suave);
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 12px;
@@ -265,8 +257,20 @@
 
 .valores-list li span {
   flex-shrink: 0;
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--verde);
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .sobre-content {
+    padding: 70px 40px;
+  }
+
+  .features-sobre {
+    padding: 80px 40px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -275,10 +279,30 @@
   }
 
   .mvv {
-    padding: 60px 20px 20px;
+    padding: 60px 24px 20px;
   }
 
   .mvv-title {
     font-size: 28px;
+  }
+
+  .sobre-content {
+    padding: 60px 24px;
+  }
+
+  .features-sobre {
+    padding: 60px 24px;
+  }
+
+  .features-grid-sobre {
+    grid-template-columns: 1fr;
+  }
+
+  .overlay h1 {
+    font-size: 36px;
+  }
+
+  .overlay p {
+    font-size: 16px;
   }
 }

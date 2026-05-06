@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect, useRef } from "react";
 import "../styles/Sobre.css"
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
@@ -6,17 +6,35 @@ import bgSobre from "../assets/sobre.png";
 import WhatsAppWidget from "../components/WhatsAppWidget";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLightbulb, faLock } from '@fortawesome/free-solid-svg-icons'
-import { FaLightbulb } from "react-icons/fa";
 
 function Sobre() {
+  const [overHero, setOverHero] = useState(false);
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+
+    const update = () => {
+      const rect = hero.getBoundingClientRect();
+      const navHeight = document.querySelector(".navbar")?.offsetHeight || 0;
+      setOverHero(rect.top < navHeight && rect.bottom > navHeight);
+    };
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
   return (
     <div className="sobre">
-      <Navbar transparente />
-      
-      <section 
+      <Navbar transparente={overHero} />
+
+      <section
+        ref={heroRef}
         className="hero-sobre"
         style={{
-          backgroundImage: `url(${Sobre})`,
+          backgroundImage: `url(${bgSobre})`,
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
@@ -67,13 +85,13 @@ Acreditamos que resultados consistentes nascem da integração entre pessoas qua
 
             <div className="mvv-card">
               <h3>Valores</h3>
+              <p className="mvv-tagline">Satisfação do cliente como prioridade inegociável</p>
               <ul className="valores-list">
-                <p className="mvv-tagline">Satisfação do cliente como prioridade inegociável</p>
-                <li><span></span> Responsabilidade na atuação</li>
-                <li><span></span> Tecnologia com propósito</li>
-                <li><span></span> Valorização das pessoas</li>
-                <li><span></span> Experiência aplicada ao dia a dia</li>
-                <li><span></span> Clareza e objetividade</li>
+                <li><span>✓</span> Responsabilidade na atuação</li>
+                <li><span>✓</span> Tecnologia com propósito</li>
+                <li><span>✓</span> Valorização das pessoas</li>
+                <li><span>✓</span> Experiência aplicada ao dia a dia</li>
+                <li><span>✓</span> Clareza e objetividade</li>
               </ul>
             </div>
           </div>

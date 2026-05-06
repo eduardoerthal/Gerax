@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Swal from "sweetalert2"; // 👈 ADICIONADO
+import { useState } from "react";
+import Swal from "sweetalert2";
 import { Navbar } from "../components/Navbar";
 import WhatsAppWidget from "../components/WhatsAppWidget";
 import { FaWhatsapp, FaPhone, FaClock, FaShareAlt, FaInstagram, FaLinkedinIn } from "react-icons/fa";
@@ -38,7 +38,6 @@ function Contato() {
       website: form.website
     };
 
-    // 👇 LOADING
     Swal.fire({
       title: "Enviando...",
       text: "Aguarde um momento",
@@ -58,14 +57,14 @@ function Contato() {
         body: JSON.stringify(dados)
       });
 
-      Swal.close(); // 👈 fecha loading
+      Swal.close();
 
       if (res.ok) {
         Swal.fire({
           icon: "success",
           title: "Mensagem enviada!",
           text: "Nossa equipe entrará em contato em breve.",
-          confirmButtonColor: "#00A63E"
+          confirmButtonColor: "#2fa84f"
         });
 
         setForm({
@@ -113,7 +112,7 @@ function Contato() {
             Atendimento rápido, próximo e sem burocracia.
           </p>
           <a
-            href="https://wa.me/5500000000000"
+            href="https://wa.me/5541988799030"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp"
@@ -141,16 +140,13 @@ function Contato() {
                 <div className="info-block">
                   <strong>HORÁRIO COMERCIAL:</strong>
                   <span>Tratativas comerciais, administrativas e suporte</span>
-                  <a href="tel:08000028000" className="btn-call">
-                    Ligar para 0800 002 8000
-                  </a>
                 </div>
 
                 <div className="info-block">
                   <strong>CENTRAL 24HR:</strong>
                   <span>Tratativas de roubo e furto</span>
-                  <a href="tel:08000306672" className="btn-call">
-                    Ligar para 0800 030 6672
+                  <a href="tel:08000809030" className="btn-call">
+                    Ligar para 0800 080 9030
                   </a>
                 </div>
               </div>

@@ -1,8 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import "../styles/Home.css";
 import WhatsAppWidget from "../components/WhatsAppWidget";
+import { LiveTrackingMap } from "../components/LiveTrackingMap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChartLine,
@@ -33,6 +33,10 @@ function Home() {
             <Link to="/solucoes" className="btn-primary">Conheça as Soluções</Link>
             <Link to="/contato" className="btn-secondary">Fale Conosco</Link>
           </div>
+        </div>
+
+        <div className="hero-visual">
+          <LiveTrackingMap />
         </div>
       </section>
 

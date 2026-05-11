@@ -48,7 +48,7 @@ def _email_confirmacao(dados) -> dict:
             f"Resumo da sua solicitação:\n"
             f"Empresa: {dados.empresa}\n"
             f"Mensagem: {dados.mensagem}\n\n"
-            f"Se precisar falar com a gente urgentemente, ligue para 0800 002 8000.\n\n"
+            f"Se precisar falar com a gente urgentemente, ligue para 0800 080 9030.\n\n"
             f"Atenciosamente,\n"
             f"Equipe Gerax Tech\n"
         ),

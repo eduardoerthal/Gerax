@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 
 function Footer() {
@@ -28,6 +28,14 @@ function Footer() {
               rel="noopener noreferrer"
             >
               <FaLinkedin />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@gerax-decisões-inteligentes"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+                <FaYoutube />
             </a>
           </div>
         </div>

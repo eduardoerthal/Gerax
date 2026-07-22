@@ -23,7 +23,7 @@ function Footer() {
             </a>
 
             <a 
-              href="https://www.linkedin.com/gerax-decisões-inteligentes-consultoria" 
+              href="https://www.linkedin.com/company/gerax-decisões-inteligentes-consultoria/" 
               target="_blank" 
               rel="noopener noreferrer"
             >

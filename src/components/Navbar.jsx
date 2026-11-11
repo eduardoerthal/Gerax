@@ -30,14 +30,14 @@ export function Navbar({ transparente }) {
         <Link to="/sobre" onClick={() => setMenuOpen(false)}>A Empresa</Link>
         <Link to="/contato" onClick={() => setMenuOpen(false)}>Contato</Link>
         
-        <a href="https://fulltrackapp.com/emp/appgerax"
-        className="btn-plataforma"
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => setMenuOpen(false)}
+        {/* Plataforma temporariamente desabilitada — link original: https://fulltrackapp.com/emp/appgerax */}
+        <Link
+          to="/plataforma"
+          className="btn-plataforma"
+          onClick={() => setMenuOpen(false)}
         >
-        Acesse a Plataforma
-        </a>
+          Acesse a Plataforma
+        </Link>
       </nav>
     </header>
   );
